@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "HelloUser": {
+      "commandName": "Project",
+      "commandLineArgs": "Venkat Jaya Preethi Shalini Guru"
+    }
+  }
+}
