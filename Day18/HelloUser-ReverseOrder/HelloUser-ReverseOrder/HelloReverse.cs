@@ -20,7 +20,7 @@ class HelloReverse
         for (int i = userNames.Length - 1; i >= 0; i--)//printing in Reverse order
         {
 
-            Console.WriteLine("Hi RRD Folks!==>" + userNames[i]);
+            Console.WriteLine("Hi RRD Folks!==>" + userNames[i].ToUpper());
         }
     }
 
