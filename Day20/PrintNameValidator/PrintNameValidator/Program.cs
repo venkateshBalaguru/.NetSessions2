@@ -16,7 +16,7 @@ class Program
             string name = Console.ReadLine();
             if (IsValid(name))
             {
-                Console.WriteLine($"The Given Name in Correct format : {name}! Good Day");
+                Console.WriteLine($"The Given Name in Correct format : Hi {name.ToUpper()}! Good Day");
                 break;
             }
             Console.WriteLine("The Name should be only in Alphabets Dont use numbers, special characters and Blank");
