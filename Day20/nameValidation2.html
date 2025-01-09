@@ -10,16 +10,14 @@
         <img src="../../images/back.jpg" alt="Back" width="50" height="50"> 
     </a>
     <h1>Name Validator in JavaScript</h1>
-    <input type="text" id="name" placeholder="Enter your Name"><button id="validate" class="style" onclick="NameValidate()">Validate</button><button id="reset" class="style" onclick="resetText()">Reset</button>
-    <h2 id="Display"></h2>
+    <form>
+        <p><strong>Enter Your Name </strong></p>
+        <input type="text" id="name" onfocus="myOnfocusevent()" onblur="myOnblurevent()">
+        <h2 id ="Display"></h2>
+    </form>
+
 <script>
-    function resetText()
-    {
-        document.getElementById("name").value = "";
-        document.getElementById("Display").innerHTML=""
-        document.getElementById("name").style.backgroundColor="white";
-    }
-   function NameValidate()
+    function myOnblurevent()
     {
     var name = document.getElementById("name").value;
     var display = document.getElementById("Display");
@@ -36,6 +34,13 @@
     document.getElementById("name").style.backgroundColor="red";
     }
     }
+    function myOnfocusevent()
+    {
+        document.getElementById("name").value="";
+        document.getElementById("name").style.backgroundColor="white";
+        document.getElementById("Display").innerHTML ="";
+        }
 </script>
+
 </body>
 </html>
