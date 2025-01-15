@@ -37,7 +37,7 @@ class Program
         Random guessnumber = new Random();
         int gNo = guessnumber.Next(1, 50);
         int attempt = 3;
-        Console.WriteLine(gNo);
+        //Console.WriteLine(gNo);
         for (int i = 1; i <= attempt; i++) //Three attempts
         {
             Console.Write($"\nEnter Your Number between 1 to 50 ==>{i}st Attempt : ");
@@ -50,7 +50,7 @@ class Program
                 Restart(playerName);
                 return;
             }
-            if (!(IsCorrect(gNo, no))) //checking the number and if lose we give clue
+            if (!(IsCorrect(gNo, no))) //checking the number and if wrong we giving  clue
             {
                 string result = (gNo < no) ? "\nYour Guessing Number is greater than Actual Number" : "\nYour Guessing Number is Smaller than Actual Number";
                 Console.WriteLine(result);
