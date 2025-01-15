@@ -37,14 +37,16 @@ class Program
         Random guessnumber = new Random();
         int gNo = guessnumber.Next(1, 50);
         int attempt = 3;
-        //Console.WriteLine(gNo);
+        Console.WriteLine(gNo);
         for (int i = 1; i <= attempt; i++) //Three attempts
         {
             Console.Write($"\nEnter Your Number between 1 to 50 ==>{i}st Attempt : ");
             int no = Convert.ToInt32(Console.ReadLine());
             if (IsCorrect(gNo, no)) //Checking the number and if win
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"Hi {playerName.ToUpper()}! You Guessed the Correct Number! The Number is {gNo} and You Win");
+                Console.ResetColor();
                 Restart(playerName);
                 return;
             }
@@ -56,7 +58,9 @@ class Program
 
         }
         Console.WriteLine("\nSorry! You missed your all chances, Try Again Later\n");  //Restarting the game
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine($"The Correct Number is {gNo}");
+        Console.ResetColor();
         Restart(playerName);
 
         static void Restart(string playername) //Restarting game from the user input with same user
