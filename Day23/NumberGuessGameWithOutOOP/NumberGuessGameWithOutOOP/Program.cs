@@ -73,6 +73,7 @@ class Program
                 return;
             }
             Console.WriteLine("\nThe Game Restarted!\n");
+            Console.WriteLine($"\nHi {playername.ToUpper()}! welcome Back to game you have three chance to win\n");
             StartGame(playername);
         }
 
