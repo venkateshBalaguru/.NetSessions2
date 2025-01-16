@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AccountAppInArray.Models
 {
@@ -15,20 +11,26 @@ namespace AccountAppInArray.Models
         private const double HIGH_BALANCE = 20000;
         private const int LONG_NAME_LENGTH = 6;
 
-        public Account(int accountNumber, string accountName, double balance)
+      
+        public Account(int accountNumber, string accountName, double balance) //constructor
         {
             _accountNumber = accountNumber;
             _accountName = accountName;
             _balance = balance;
         }
 
-        public Account(int accountNumber, string accountName)
+        public Account(int accountNumber, string accountName)//constructor overloading
         {
             _accountNumber = accountNumber;
             _accountName = accountName;
             _balance = MIN_BALANCE;
         }
 
+        public static void Transfer(Account fromAccount, Account toAccount, double amount)//method to transfer amount from one account to another account
+        {
+            fromAccount.Withdraw(amount);
+            toAccount.Deposit(amount);
+        }
         public double Balance
         {
             get { return _balance; }
@@ -58,23 +60,24 @@ namespace AccountAppInArray.Models
             }
         }
 
-        public String RichestAccountHolder()
+        public bool RichestAccountHolder()//method to check the balance of account holder  is greater than 20000 to set the Richest account holder
         {
             if (_balance > HIGH_BALANCE)
             {
-                return $"Richest Account Holder!";
+                return true;
             }
-            return "";
+            return false;
         }
 
-        public string LongestNameAccountHolder()
+        public bool LongestNameAccountHolder() //method to check the length of account holder name is greater than 6 to set the Longest name holder
         {
             if (_accountName.Length > LONG_NAME_LENGTH)
             {
-                return $"Longest Name Account Holder!";
+                return true;
             }
-            return "";
+            return false;
         }
+
     }
 }
 
