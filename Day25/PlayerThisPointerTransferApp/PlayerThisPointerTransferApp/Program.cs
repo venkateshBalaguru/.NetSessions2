@@ -17,7 +17,7 @@ namespace PlayerThisPointerTransferApp
             Console.WriteLine(playerSachin.Deposit(2000));
             Console.WriteLine(playerSachin.Withdraw(1000));
 
-            Player transferAmount = playerVenkat.Transfer(playerSachin, 500000);
+            Player transferAmount = playerVenkat.Transfer(playerSachin, 5000);
             PrintDetails(transferAmount);
             
             //PrintDetails(playerVenkat);

@@ -67,8 +67,10 @@ namespace PlayerThisPointerTransferApp.Models
             {
                 this.balance -= amount;
                 secondPlayer.Deposit(amount);
+                Console.WriteLine($"Transaction Successful. The amount {amount} has been deposited. Check the balance.");
                 return secondPlayer;
             }
+            Console.WriteLine($"Transaction Amount {amount} is Declined due to Minimum Balance! Check the balance.");
             return this;
         }
 
