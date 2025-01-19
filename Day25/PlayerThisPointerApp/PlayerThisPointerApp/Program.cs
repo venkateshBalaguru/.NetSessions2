@@ -1,6 +1,4 @@
-﻿//Player playerVenkat = new Player("Rahul", 25, 101); //We using regular way to create object of Player class
-//var playerVenkat = new Player("Venkatesh", 25, 101); //Here the var is special keyword in C# which is used to declare a variable of a particular type and it is implicitly typed variable.(its a compile time variable)
-using PlayerThisPointerApp.Models;
+﻿using PlayerThisPointerApp.Models;
 using System;
 
 class Program
@@ -8,6 +6,8 @@ class Program
 
     static void Main()
     {
+        //Player playerVenkat = new Player("Rahul", 25, 101); //We using regular way to create object of Player class
+        //var playerVenkat = new Player("Venkatesh", 25, 101); //Here the var is special keyword in C# which is used to declare a variable of a particular type and it is implicitly typed variable.(its a compile time variable)
 
         var playerMinu = new Player(1, "Minu",28);
         PrintDetails(playerMinu);
