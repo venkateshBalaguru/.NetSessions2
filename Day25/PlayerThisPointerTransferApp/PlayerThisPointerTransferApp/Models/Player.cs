@@ -24,17 +24,23 @@ namespace PlayerThisPointerTransferApp.Models
 
         }
 
-        public void Deposit(double amount)
+        public string Deposit(double amount)
         {
             balance += amount;
+            return $"Your Transaction Amount \"{amount}\" is Deposited to the Account {name} your balance is \"{balance}\"\n";
         }
 
-        public void Withdraw(double amount)
+
+
+
+        public string Withdraw(double amount)
         {
             if (balance - amount >= MIN_BALANCE)
             {
                 balance -= amount;
+                return $"Your Transaction Amount \"{amount}\" is Withdrawn from the Account {name} your Balance : {balance}\n";
             }
+            return $"Your Transaction Amount \"{amount}\" is Declined Due to Maintaining the Minimum Balance! Your Balance : {amount}\n";
 
         }
         public int Age
@@ -55,24 +61,16 @@ namespace PlayerThisPointerTransferApp.Models
             get { return balance; }
         }
 
-        //public Player Transfer(Player secondPlayer, double amount)
-        //{
-        //    if (this.balance - amount >= MIN_BALANCE)
-        //    {
-        //        this.balance -= amount;
-        //        secondPlayer.Deposit(amount);
-        //    }
-        //    return secondPlayer;
-        //}
-
         public Player Transfer(Player secondPlayer, double amount)
         {
-            if (balance - amount >= MIN_BALANCE)
+            if (this.balance - amount >= MIN_BALANCE)
             {
-                balance -= amount;
+                this.balance -= amount;
                 secondPlayer.Deposit(amount);
+                return secondPlayer;
             }
-            return secondPlayer;
+            return this;
         }
+
     }
 }

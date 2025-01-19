@@ -9,9 +9,10 @@ class Program
     static void Main()
     {
 
-        var playerMinu = new Player(1, "Minu", 25);
+        var playerMinu = new Player(1, "Minu",28);
         PrintDetails(playerMinu);
 
+        //PrintDetails(new Player(3, "VenkatBala", 25)); //anonymous object
 
         var playerVenkat = new Player(2, "Venkat");
         PrintDetails(playerVenkat);
@@ -28,7 +29,7 @@ class Program
         Console.WriteLine($"Player ID: {player.Id}");
         Console.WriteLine($"Player Name: {(player.Name == null ? "Null" : player.Name)}");
         Console.WriteLine($"Player Age: {player.Age}");
-        Console.WriteLine($"hascoe is {player.GetHashCode()}");
+        Console.WriteLine($"has code is {player.GetHashCode()}");
         Console.WriteLine();
 
     }

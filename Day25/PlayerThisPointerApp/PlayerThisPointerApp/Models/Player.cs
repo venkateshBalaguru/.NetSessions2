@@ -50,13 +50,13 @@ namespace PlayerThisPointerApp.Models
 
             //Player x;x expects an object of Player class
 
-            //if (this.age == secondPlayer.age) 
+            //if (this.age == secondPlayer.age)
             //{
-            //    return null;  // if the value return null means it will not throw null error
-            //} 
+            //    return null;  // if the value return null means it will  throw null system error
+            //}
 
             //return secondPlayer.age > this.age ? secondPlayer : this;
-            if (age > age)
+            if (this.age > secondPlayer.age)
             {
                 return this;
             }
