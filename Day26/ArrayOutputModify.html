@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArrayModifyOutput</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <h1>Array Output Modify in JS</h1>
+        <!-- <a href="../index.html">
+            <img src="../images/back.jpg" alt="Back Button" width="50" height="50">
+        </a>  -->
+    </header>
+    <p id="demo"></p>
+
+    <script>
+    const names = ["venkat", "Sachin", "Minu"];
+    
+    let result="";
+    let head="";
+    let foot="";
+    let finalresult;
+    
+    for (let i = 0; i < names.length; i++) 
+    {
+        head = "**** ,";
+        result += "**" + names[i] +"**,";
+        foot = " ****";
+        finalresult = head + result + foot;
+    }
+
+     document.getElementById("demo").innerHTML = finalresult;
+    </script>
+    
+    
+    </body>
+    </html>

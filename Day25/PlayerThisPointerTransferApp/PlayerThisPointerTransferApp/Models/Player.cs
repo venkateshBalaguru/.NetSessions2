@@ -63,9 +63,9 @@ namespace PlayerThisPointerTransferApp.Models
 
         public Player Transfer(Player secondPlayer, double amount)
         {
-            if (this.balance - amount >= MIN_BALANCE)
+            if (balance - amount >= MIN_BALANCE)
             {
-                this.balance -= amount;
+                balance -= amount;
                 secondPlayer.Deposit(amount);
                 Console.WriteLine($"Transaction Successful. The amount {amount} has been deposited. Check the balance.");
                 return secondPlayer;
