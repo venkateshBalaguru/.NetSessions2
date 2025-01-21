@@ -9,10 +9,10 @@ namespace EmployeeIdCounterApp
         {
            var emp1 = new Employee("Venkatesh");
            PrintDetails(emp1);
-
+            
            var emp2 = new Employee("Jaya");
            PrintDetails(emp2);
-            Console.WriteLine($"Head Count: {Employee.HeadCount}");
+
             var emp3 = new Employee("Sachin");
             PrintDetails(emp3);
             PrintDetails(emp1);
@@ -20,7 +20,7 @@ namespace EmployeeIdCounterApp
 
            var emp4 = new Employee("Prem");
             PrintDetails(emp4);
-            Console.WriteLine($"Head Count: {Employee.HeadCount}");
+           // Console.WriteLine($"Head Count: {Employee.HeadCount}");
 
         }
 
@@ -28,7 +28,7 @@ namespace EmployeeIdCounterApp
         {
             Console.WriteLine($"Employee Name: {emp.EmpName}");
             Console.WriteLine($"Employee ID: {emp.EmpId}");
-            //Console.WriteLine($"Head Count: {Employee.HeadCount}");
+            Console.WriteLine($"Head Count: {Employee.HeadCount}");
             Console.WriteLine();
         }
     }

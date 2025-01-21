@@ -13,7 +13,6 @@ namespace AccountCounterApp.Models
         private readonly string _name;
         private double _balance;
         private const double MIN_BALANCE = 500;
-        private int _counter=101;
         private static int _instanceCounter;//Static means its global variable, its not an instance variable, its shared across all instances of the class
 
         //private static int LoadLastCounterValueFromDB() {
