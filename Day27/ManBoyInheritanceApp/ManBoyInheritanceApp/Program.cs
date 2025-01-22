@@ -66,8 +66,10 @@ namespace ManBoyInheritanceApp
             result++;
             Console.WriteLine(result);
 
-            box = new Boy();
+            box = new Boy(); //Here we can make a box as object because it is basically object type
             Console.WriteLine(box.GetType());
+
+            //box.play();//we can't do that we have to unbox
             var boy = (Boy)box; //unboxing
             boy.Play();
 

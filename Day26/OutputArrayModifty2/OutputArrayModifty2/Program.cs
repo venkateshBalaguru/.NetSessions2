@@ -28,7 +28,7 @@ namespace OutputArrayModify2
                     resultArray[index+1] = ",**" + inputArray[index] + "**";
                 }
 
-                resultArray[resultArray.Length - 1] = endBorder;
+                //resultArray[resultArray.Length - 1] = endBorder;
 
                 return resultArray;
             }
