@@ -7,11 +7,18 @@ namespace OutputArrayLongestString
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Finding the Longest Name in the Array");
+            Console.WriteLine("Finding the Longest Name in the Array\n");
             string[] names = { "Venkat", "Akhilesh", "Raja", "Shalini", "BalaVenk" };
+            Console.WriteLine("The Given Names");
+            Console.WriteLine("================");
+            foreach(string name in names)
+            {  Console.WriteLine(name); }
             string[] OutputArray = LongestName(names);
+            Console.WriteLine("\nThe Longest Names are:");
+            Console.WriteLine("=======================");
             foreach (string name in OutputArray)
             {
+                if(name != null)
                 Console.WriteLine(name);
             }
   
@@ -19,7 +26,7 @@ namespace OutputArrayLongestString
 
         public static string[] LongestName(string[] namesArray)
         {
-            string[] resultArray = new string[];
+            string[] resultArray = new string[namesArray.Length];
 
             int HighestnameLength = 0;
             for (int i = 0; i < namesArray.Length; i++)
@@ -35,7 +42,7 @@ namespace OutputArrayLongestString
                 if (namesArray[i].Length == HighestnameLength)
                 {
                     resultArray[i] = namesArray[i];
-                    //Console.WriteLine(resultArray[i]);
+                    
                 }
             }
             return resultArray;
