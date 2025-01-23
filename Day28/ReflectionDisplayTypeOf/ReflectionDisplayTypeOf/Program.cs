@@ -7,6 +7,7 @@ namespace ReflectionDisplayTypeOf
         static void Main(string[] args)
         {
             DisplayNameOfType.DoReflection(typeof(Employee));
+            DisplayNameOfType.DoReflection(typeof(Account));
 
         }
     }

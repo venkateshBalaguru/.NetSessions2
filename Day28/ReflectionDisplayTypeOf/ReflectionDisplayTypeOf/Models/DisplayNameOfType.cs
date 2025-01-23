@@ -11,7 +11,9 @@ namespace ReflectionDisplayTypeOf.Models
     {
         public static void DoReflection(Type type)
         {
-            Console.WriteLine($"Class Name ==> {type.Name}\n======================");
+            Console.WriteLine($"\nClass Name ==> {type.Name}\n======================");
+
+            Console.Write($"Members Count : {type.GetMembers().Length}\n\n");
 
             Console.Write($"Constructors\n-------------- \nCount: {type.GetConstructors().Length}\nName : ");
             foreach (ConstructorInfo name in type.GetConstructors())
