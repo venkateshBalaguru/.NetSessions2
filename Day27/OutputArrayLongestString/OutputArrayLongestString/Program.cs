@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Metrics;
 
 namespace OutputArrayLongestString
 {
@@ -11,42 +12,59 @@ namespace OutputArrayLongestString
             string[] names = { "Venkat", "Akhilesh", "Raja", "Shalini", "BalaVenk" };
             Console.WriteLine("The Given Names");
             Console.WriteLine("================");
-            foreach(string name in names)
-            {  Console.WriteLine(name); }
+            foreach (string name in names)
+            { Console.WriteLine(name); }
             string[] OutputArray = LongestName(names);
             Console.WriteLine("\nThe Longest Names are:");
             Console.WriteLine("=======================");
             foreach (string name in OutputArray)
             {
-                if(name != null)
-                Console.WriteLine(name);
+                     Console.WriteLine(name);
             }
-  
+
         }
 
         public static string[] LongestName(string[] namesArray)
         {
-            string[] resultArray = new string[namesArray.Length];
+
 
             int HighestnameLength = 0;
+            int count = 0;
             for (int i = 0; i < namesArray.Length; i++)
             {
-                if (namesArray[i].Length >= HighestnameLength)
+                if (namesArray[i].Length > HighestnameLength)
                 {
                     HighestnameLength = namesArray[i].Length;
                 }
             }
-
+            count = Counter(namesArray, HighestnameLength);
+            string[] resultArray = new string[count];
+            int index = 0;
             for (int i = 0; i < namesArray.Length; i++)
             {
+
                 if (namesArray[i].Length == HighestnameLength)
                 {
-                    resultArray[i] = namesArray[i];
-                    
+                    resultArray[index] = namesArray[i];
+                    index++;
+
                 }
             }
             return resultArray;
         }
+        public static int Counter(string[] names, int hlength)
+        {
+            int counterNo = 0;
+            foreach (string name in names)
+            {
+                if (name.Length == hlength)
+                {
+                    counterNo = counterNo + 1;
+
+                }
+            }
+            return counterNo;
+        } 
     }
 }
 
