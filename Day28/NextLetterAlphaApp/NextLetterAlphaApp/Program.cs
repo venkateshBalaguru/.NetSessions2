@@ -28,10 +28,10 @@
                 {
                     if (c != 'z' && c!='Z')
                     {
-                        nextAlphabet += c + 1;
+                        nextAlphabet += (char)(c+1);
                     }
                     else
-                        nextAlphabet += (char)(c - 25);
+                        nextAlphabet += (char)(c-25);
                 }
             
                 Console.WriteLine(nextAlphabet);
