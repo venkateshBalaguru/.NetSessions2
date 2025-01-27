@@ -40,15 +40,20 @@ namespace EqualityApp.Models
         {
             return $" Id ==> {_id} , Name ==> {_name} , Salary {_salary} , base implement : {base.ToString()}";
         }
-
-        public override bool Equals(object obj)
+        //This Equals method is from Object class we have to override for our logic
+        public override bool Equals(Object obj)
         {
 
             var second = (Employee)obj;
-            return this._id == second._id
-                && this._name == second._name
-               ;
+            
+            return this._id == second._id && this._name == second._name;
         }
+        //This Equals method is created in our Employee Class. if we created this our method only execute eventhought the parent method will not execute
+        //public bool Equals(Employee obj)
+        //{
+        //    var second = obj;
+        //    return this._id != second._id && this._name != second._name;
+        //}
 
     }
 }

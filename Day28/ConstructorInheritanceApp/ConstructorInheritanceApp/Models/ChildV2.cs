@@ -14,7 +14,7 @@ namespace ConstructorInheritanceApp.Models
             Console.WriteLine("childv2 created");
         }
 
-        public ChildV2(int age, string name) : base(age) 
+        public ChildV2(int age, string name) : base(20)
         {
             _name = name;
             Console.WriteLine("childv2 created");

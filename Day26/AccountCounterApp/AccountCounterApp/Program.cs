@@ -12,23 +12,23 @@ namespace AccountCounterApp
             Console.ForegroundColor = ConsoleColor.Red;
 
             var venkat = new Account(101, "Venakat", 2000);
-            Console.WriteLine(venkat.InstanceCounter);
-            Console.WriteLine(Account.HeadCount);
+            Console.WriteLine("instance counter" + venkat.InstanceCounter);
+            Console.WriteLine("Head count - " + Account.HeadCount);
 
             Console.ResetColor();//staic method
 
 
             var minu = new Account(102, "Minu", 1000);
-            Console.WriteLine(venkat.InstanceCounter);
-            Console.WriteLine(Account.HeadCount);
+            Console.WriteLine("instance counter" + venkat.InstanceCounter);
+            Console.WriteLine("Head count - " + Account.HeadCount);
 
             new Account(103, "Akhilesh", 3000);
-            Console.WriteLine(venkat.InstanceCounter);
-            Console.WriteLine(Account.HeadCount);
+            Console.WriteLine("instance counter" + minu.InstanceCounter);
+            Console.WriteLine("Head count - " + Account.HeadCount);
 
 
-            Console.WriteLine(Account.HeadCount);
-            Console.WriteLine(minu.InstanceCounter);
+            Console.WriteLine("Head count - " + Account.HeadCount);
+            Console.WriteLine("instance counter" + venkat.InstanceCounter);
         }
     }
 }

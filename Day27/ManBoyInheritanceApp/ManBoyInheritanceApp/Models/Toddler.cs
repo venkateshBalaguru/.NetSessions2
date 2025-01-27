@@ -11,6 +11,7 @@ namespace ManBoyInheritanceApp.Models
         public override void Play()
         {
             Console.WriteLine("Toddler is playing");
+            //base.Play();
         }
     }
 }

@@ -10,14 +10,14 @@ namespace RectanglesWithPropertiesApp.Models
         private int _width;
         private int _height;
         private BorderOptions _borderStyle;
-
         private const int MIN_DIMENSION = 1;
         private const int MAX_DIMENSION = 100;
-
-
-
-
-
+        public static int count = 0;
+        
+        public Rectangle()  //This constructor is used to count the object in class
+        {
+            count = count + 1;
+        }
         //properties
 
         public int Width

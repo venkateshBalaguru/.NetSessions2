@@ -7,9 +7,8 @@ namespace ConstructorInheritanceApp
     {
         static void Main(string[] args)
         {
-             CaseStudy1();
-
-            CaseStudy2();
+            //CaseStudy1();
+            //CaseStudy2();
             CaseStudy3();
         }
 

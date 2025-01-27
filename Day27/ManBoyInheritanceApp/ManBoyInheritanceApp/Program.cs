@@ -4,21 +4,21 @@ using ManBoyInheritanceApp.Models;
 namespace ManBoyInheritanceApp
 {
     // If it is in structure it is a value type  there no reference address
-    struct Point
-    {
-
-        public int x;
-        public int y;
-
-    }
-    //It is class type so it is a reference type
-    //class Point
+    //struct Point
     //{
+
     //    public int x;
     //    public int y;
-    //}
 
-    internal class Program
+    //}
+//It is class type so it is a reference type
+class Point
+{
+    public int x;
+    public int y;
+}
+
+internal class Program
         {
             static void Main(string[] args)
             {
@@ -26,7 +26,7 @@ namespace ManBoyInheritanceApp
 
                 //CaseStudy2();// child inherited the Man class method
 
-               // CaseStudy3();// child override the methods 
+                //CaseStudy3();// child override the methods 
 
                 //CaseStudy4(); //Polymorphic method
 
@@ -51,6 +51,8 @@ namespace ManBoyInheritanceApp
 
             int no1 = 100;
             int no2 = no1;
+            Console.WriteLine(no1);
+            Console.WriteLine(no2);
 
         }
 
@@ -62,7 +64,7 @@ namespace ManBoyInheritanceApp
             box = 100; //boxing
             Console.WriteLine(box.GetType());
             //int result = box; // we can't perform this because here box is not a integer variable its an a object type.
-            int result = (int)box;
+            int result = (int)box;//Unboxing the object type to integer type
             result++;
             Console.WriteLine(result);
 
@@ -90,8 +92,9 @@ namespace ManBoyInheritanceApp
         {
             Console.WriteLine("At the park!!");
             x.Play();
-
+                      
         }
+        
 
         private static void CaseStudy3()
         {
@@ -100,6 +103,7 @@ namespace ManBoyInheritanceApp
             x = new Boy(); //Here we put Boy class in the Man because Man is parent in the Parent class we can use child
             x.Play(); //But we call the Man class method only we can't call Boy's method (because the compiler will give the types of x is Man class method
             x.Read();
+            
             //x.Write(); //we can't call the method Boy class
         }
 
@@ -108,7 +112,7 @@ namespace ManBoyInheritanceApp
             var boy = new Boy();
             boy.Read();
             boy.Write();
-            boy.Play();//who plays??
+            boy.Play();//who plays==> Boy plays
         }
 
         private static void CaseStudy1()
@@ -119,4 +123,5 @@ namespace ManBoyInheritanceApp
                 man1.Read();
             }
         }
+
     }

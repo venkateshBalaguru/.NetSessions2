@@ -11,7 +11,7 @@ namespace AlphaSequenceApp2.Models
     {
         public static void SequenceAlphabet(string[] names)
         {
-            bool result = true;
+
             foreach (var name in names)
             {
                 string lowerCaseName = name.ToLower();
@@ -19,6 +19,7 @@ namespace AlphaSequenceApp2.Models
             }
             
         }
+         
 
         private static bool IsSequence(string name)
         {

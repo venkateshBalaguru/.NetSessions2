@@ -7,24 +7,10 @@ namespace AlphaSequenceApp2
         static void Main(string[] args)
         {
             string[] names = { "az", "baca", "ad", "AB", "Aba" };
-            Sequence.SequenceAlphabet(names);
-            
-        }
-
-        public static void PrintDetails(bool result)
-        {
             Console.WriteLine("Finding the given names IsCorrect alphabet sequence");
             Console.WriteLine("===================================================");
+            Sequence.SequenceAlphabet(names);
             
-                if (result)
-                {
-                    Console.WriteLine($"The Given Name  IsSequence==> {result}");
-                }
-                else
-                {
-                    Console.WriteLine($"The Given Name  IsSequence==> {result}");
-                }
-
         }
     }
 }

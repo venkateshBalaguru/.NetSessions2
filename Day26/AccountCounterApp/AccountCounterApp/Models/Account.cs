@@ -36,13 +36,13 @@ namespace AccountCounterApp.Models
             _instanceCounter++;
         }
 
-        //public Account(int accountNumber, string name)
-        //{
-        //    _accountNumber = accountNumber;
-        //    _name = name;
-        //    _balance = MIN_BALANCE;
-        //    _instanceCounter++;
-        //}
+        public Account(int accountNumber, string name)
+        {
+            _accountNumber = accountNumber;
+            _name = name;
+            _balance = MIN_BALANCE;
+            _instanceCounter++;
+        }
 
         public void Deposit(double amount)
         {

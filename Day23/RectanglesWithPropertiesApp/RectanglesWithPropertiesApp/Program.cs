@@ -35,8 +35,7 @@ namespace RectanglesWithPropertiesApp
             r3.Height = 20;
             r3.BorderStyle = BorderOptions.Double;
             //PrintDetails("r3 rectangel", r3);
-
-            
+            Console.WriteLine("count"+ Rectangle.count); //To find the count of objects in a class we have create a default constructor with count field in a static
 
 
             Rectangle[] manyRectangles = new Rectangle[4];

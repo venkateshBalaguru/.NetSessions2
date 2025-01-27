@@ -21,26 +21,26 @@ namespace PlayerThisPointerApp.Models
         //    id = id;
         //    Console.WriteLine("Name: " + name + " Age: " + age + " Id: " + id); This will print the local variable value but the instance varibale remains the same null values
         //}
-        public Player(int id, string name) //if we use this keywork it will identify the variable is from instance
+        public Player(int id, string name, int age) //if we use this keywork it will identify the variable is from instance
         {
             this.id = id;
             this.name = name;
-            //this.age = age;
+            this.age = age;
 
             Console.WriteLine("player created");
         }
 
 
-        //public Player(int id,string name)
+        //public Player(int id, string name)
         //{
         //    this.name = name;
-        //   // this.age = MIN_AGE;// we assigning the age to default value MIN_AGE
+        //    this.age = MIN_AGE;// we assigning the age to default value MIN_AGE
         //    this.id = id;
         //}
         //Instead of above lines we doing the Constructor chaining it will invoke from the main constructor 
 
 
-      //  constructor chaining
+        //  constructor chaining
         public Player(int id, string name) : this(id, name, MIN_AGE)
         {
 
