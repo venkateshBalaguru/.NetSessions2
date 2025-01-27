@@ -23,13 +23,16 @@ namespace EmployeeAbstractionApp
 
         public static void PrintDetails(Employee employee)
         {
-            Console.WriteLine($"Employee Name : { employee.EmpName}\n");
+            Console.WriteLine($"\nEmployee Designation : {employee.GetType().Name}");
+            Console.WriteLine($"Employee Name : {employee.EmpName}");
             Console.WriteLine($"Employee ID : {employee.EmpId}");
-            //Console.WriteLine($"Employee Performance Allowance : {employee.Perfor}")
-            Console.WriteLine($"Employee Basic Salary : {employee.BasicSalary} ");
-            //Console.WriteLine($"Employee Performance Allowance : {employee.PerformanceAllowance}");
-            Console.WriteLine($"Employee Net Pay : {employee.NetSalary}");
-            Console.WriteLine($"Employee CTC : {employee.CTC}");
+            Console.WriteLine($"Employee Basic Salary : {employee.BasicSalary}");
+            Console.WriteLine($"Salary Details==> {employee.GetDetails()}");
+            Console.WriteLine($"Net salary : {employee.NetSalary()}");
+            Console.WriteLine($"CTC Per Annum : {employee.CTC()}");
+
         }
+
     }
 }
+

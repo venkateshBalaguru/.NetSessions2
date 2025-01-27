@@ -28,9 +28,9 @@ internal class Program
 
                 //CaseStudy3();// child override the methods 
 
-                //CaseStudy4(); //Polymorphic method
+                CaseStudy4(); //Polymorphic method
 
-                CaseStudy5(); //Highest type of polymorphism is using Object class
+                //CaseStudy5(); //Highest type of polymorphism is using Object class
 
                 //CaseStudy6();
             }

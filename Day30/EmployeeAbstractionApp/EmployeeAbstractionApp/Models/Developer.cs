@@ -9,14 +9,27 @@ namespace EmployeeAbstractionApp.Models
     class Developer : Employee
     {
         private double _performanceAllowance;
+        private double _netSalary;
+        private double _cTc;
         public Developer(int empId, string empName, double basicSalary) : base(empId, empName, basicSalary) { }
 
-        public double PerformanceAllowance { get { return _performanceAllowance; } }
-        public override double BasicSalary(double salary)
+        public override string GetDetails()
         {
-            _performanceAllowance = ((40 / _basicSalary) * 100);
-            _netSalary = _basicSalary + _performanceAllowance;
-            _cTc = _netSalary * MONTH;
+            _performanceAllowance = _basicSalary * .40;
+            return $" Performance Allowance : {_performanceAllowance} ||";
         }
+        public override double NetSalary()
+        {
+            _netSalary = _performanceAllowance + _basicSalary;
+            return _netSalary;
+        }
+
+        public override double CTC()
+        {
+            _cTc = _netSalary * 12;
+            return _cTc;
+        }
+
+
     }
 }
