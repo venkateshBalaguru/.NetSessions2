@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MultiInterfaceApp.Models
 {
-    internal interface IEmotionable
+    internal interface IEmotionable 
     {
         void Cry();
         void Laugh();

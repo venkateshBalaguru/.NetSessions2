@@ -10,9 +10,9 @@ namespace MultiInterfaceApp
             var man = new Man();
             var boy = new Boy();
 
-           // AtTheMovies(man);
+            //AtTheMovies(man);
             AtTheMovies(boy);
-            AtThePark(boy);
+            AtThePark(boy);//we using this interface to the boy class also
             AtThePark(man);
 
 

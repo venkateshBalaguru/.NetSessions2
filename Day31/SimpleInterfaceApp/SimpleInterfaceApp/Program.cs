@@ -20,6 +20,7 @@ namespace SimpleInterfaceApp
             crudable.Update(); 
             crudable.Delete();
             Console.WriteLine("Completed the DB operations");
+            Console.WriteLine();
         }
     }
 }
