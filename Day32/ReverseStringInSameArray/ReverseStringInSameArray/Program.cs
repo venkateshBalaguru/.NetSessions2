@@ -6,12 +6,12 @@ namespace ReverseStringInSameArray
     {
         static void Main(string[] args)
         {
-            string[] inputArray = { "Venkat", "Akhilesh", "Sachin" };
+            string[] inputArray = { "Venkat", "Akhilesh", "Sachin", "Prem"};
             string temp;
             int arrayLength = inputArray.Length-1;
             Console.WriteLine("Array in straight order\n======================");
             PrintArray(inputArray);
-            for (int i = 0; i < inputArray.Length-1; i++)
+            for (int i = 0; i < arrayLength; i++)
             {
                 temp = inputArray[i];
                 inputArray[i] = inputArray[arrayLength];
