@@ -7,8 +7,6 @@ namespace AccountCommonLibUsingHasA.Models
         private readonly int _accountNumber;
         private readonly string _name;
         private double _balance;
-        private string name;
-        private double balance;
         private const double MINIMUM_BALANCE = 500;
 
         public Account(int accountNumber, string name, double balance)

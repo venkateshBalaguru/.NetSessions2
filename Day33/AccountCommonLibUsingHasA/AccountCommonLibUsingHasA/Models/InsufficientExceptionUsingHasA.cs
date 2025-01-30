@@ -17,7 +17,7 @@ namespace AccountCommonLibUsingHasA.Models
         }
 
         public override string Message
-        { 
+        {
             get
             {
                 return $"account holder:{_accountHolder.Name} , does not have sufficient for withdraw of balance is only :{_accountHolder.Balance}";
