@@ -33,8 +33,8 @@ namespace AccountCommonLibUsingHasA.Models
         {
             if (_balance - amount < MINIMUM_BALANCE)
             {
-                var account = new Account(AccountNumber, _name, _balance);
-                throw new InsufficientExceptionUsingHasA(account);
+                //var account = new Account(AccountNumber, _name, _balance);
+                throw new InsufficientExceptionUsingHasA(this);
             }
 
                 _balance -= amount;
