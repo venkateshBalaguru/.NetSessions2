@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLayer", "{B02738BD-A49E-4342-83D7-C0D9393F9623}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PresentationLayer", "PresentationLayer", "{8A2701D8-5C0C-491E-97A5-82D6B4D92E38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalCommonLib", "CalCommonLib\CalCommonLib.csproj", "{64E6E00C-97EC-46B1-AF9A-2C58AB1693F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalConsoleApp", "CalConsoleApp\CalConsoleApp.csproj", "{67BC24C3-4F40-4A3C-A640-D52ED9FF2495}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64E6E00C-97EC-46B1-AF9A-2C58AB1693F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E6E00C-97EC-46B1-AF9A-2C58AB1693F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E6E00C-97EC-46B1-AF9A-2C58AB1693F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E6E00C-97EC-46B1-AF9A-2C58AB1693F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67BC24C3-4F40-4A3C-A640-D52ED9FF2495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67BC24C3-4F40-4A3C-A640-D52ED9FF2495}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67BC24C3-4F40-4A3C-A640-D52ED9FF2495}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67BC24C3-4F40-4A3C-A640-D52ED9FF2495}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64E6E00C-97EC-46B1-AF9A-2C58AB1693F4} = {B02738BD-A49E-4342-83D7-C0D9393F9623}
+		{67BC24C3-4F40-4A3C-A640-D52ED9FF2495} = {8A2701D8-5C0C-491E-97A5-82D6B4D92E38}
+	EndGlobalSection
+EndGlobal

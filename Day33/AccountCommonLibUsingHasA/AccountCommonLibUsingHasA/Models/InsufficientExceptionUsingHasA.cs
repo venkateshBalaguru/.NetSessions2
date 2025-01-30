@@ -16,6 +16,7 @@ namespace AccountCommonLibUsingHasA.Models
             _accountHolder = account;
         }
 
+       // public override string Message => base.Message; //this will print the parent class message(Here parent class is Exception)
         public override string Message
         {
             get

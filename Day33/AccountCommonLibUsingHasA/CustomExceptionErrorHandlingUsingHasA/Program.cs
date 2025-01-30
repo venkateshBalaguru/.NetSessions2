@@ -6,10 +6,10 @@ namespace CustomExceptionErrorHandlingUsingHasA
     {
         static void Main(string[] args)
         {
-            Account account1 = new Account(101, "Bala", 3000);
+            Account account1 = new Account(101, "Bala", 1000);
             Account account2 = new Account(105, "Venkatesh", 5000);
             Account account3 = new Account(106, "Sachin", 6000);
-            Account[] accounts = {account1, account2, account3};
+            Account[] accounts = { account1, account2, account3 };
             try
             {
                 account1.Withdraw(1000);//risky
@@ -35,5 +35,5 @@ namespace CustomExceptionErrorHandlingUsingHasA
                 Console.WriteLine($"Acc No : {account.AccountNumber}\nName : {account.Name}\nBalance : {account.Balance}\n");
             }
         }
-    }   
+    }
 }
