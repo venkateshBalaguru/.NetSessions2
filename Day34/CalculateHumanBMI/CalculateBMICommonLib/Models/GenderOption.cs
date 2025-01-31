@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalculateBMICommonLib.Models
 {
-    public enum Gender
+    public enum GenderOption
     {
         Male,Female
     }

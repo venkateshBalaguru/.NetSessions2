@@ -11,18 +11,28 @@ namespace CalculateBMI
             
 
 
-                var person1 = new HumanBeing("Venkat", 35, "Male", 70, 7);
-                var person2 = new HumanBeing("Sachin", 24, "male", 45, 5);
-                //var person3 = new HumanBeing("Prem", 30, "Male", 50, 9);
-                var person4 = new HumanBeing("Jaya", 30, "Female", 65, 5.8);
-                var person5 = new HumanBeing("Shalini", 32, "Female", 60, 5.7);
+                var person1 = new HumanBeing("Venkat", 35, GenderOption.Male, 70, 7);
+                var person2 = new HumanBeing("Sachin", 24, GenderOption.Male, 45, 5);
+                var person3 = new HumanBeing("Prem", 30, GenderOption.Male, 50, 9);
+                var person4 = new HumanBeing("Jaya", 30, GenderOption.Female, 65, 5.8);
+                var person5 = new HumanBeing("Shalini", 32, GenderOption.Female, 60, 5.7);
             try
             {
                 human.Add(person1);
                 human.Add(person2);
-                //human.Add(person3);
+                human.Add(person3);
                 human.Add(person4);
                 human.Add(person5);
+                PrintDetails(human);
+                Console.WriteLine($"\nBefore Eat or Workout\n======================");
+                CheckEatWorkOut(person4);
+                CheckEatWorkOut(person5);
+                Console.WriteLine($"\nAfter Eat or Workout\n=======================");
+                person4.Eat();
+                person5.WorkOut();
+                CheckEatWorkOut(person4);
+                CheckEatWorkOut(person5);
+                Console.WriteLine("\nEnd Main............");
             }
 
             //try
@@ -42,16 +52,7 @@ namespace CalculateBMI
                 }
 
             }
-            PrintDetails(human);
-            Console.WriteLine($"\nBefore Eat or Workout\n======================");
-            CheckEatWorkOut(person4);
-            CheckEatWorkOut(person5 );
-            Console.WriteLine($"\nAfter Eat or Workout\n=======================");
-            person4.Eat();
-            person5.WorkOut();
-            CheckEatWorkOut(person4);
-            CheckEatWorkOut(person5);
-            Console.WriteLine("\nEnd Main............");
+
         }
 
         public static void PrintDetails(ArrayList listOfHuman)

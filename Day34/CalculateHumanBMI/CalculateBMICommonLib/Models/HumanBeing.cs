@@ -10,15 +10,15 @@ namespace CalculateBMICommonLib.Models
     {
         private string _name;
         private int _age;
-        //private Gender _gender;
-        private string _gender;
+        private GenderOption _gender;
+        //private string _gender;
         private double _weight;
         private double _height;
         private double _bmi;
         private double _inchToMeterHeight;
 
 
-        public HumanBeing(string name, int age, string gender, double weight, double height)
+        public HumanBeing(string name, int age, GenderOption gender, double weight, double height)
         {
             _name = name;
             _age = age;
@@ -33,11 +33,10 @@ namespace CalculateBMICommonLib.Models
 
         public int Age { get { return _age; } }
        // public Gender Gender {  get { return _gender; } }
-       public string Gender 
+       public GenderOption Gender 
         { 
             get
             { 
-                _gender = _gender.ToLower();
                 return _gender; 
             }
         }
@@ -47,7 +46,7 @@ namespace CalculateBMICommonLib.Models
 
         public void Eat()
         {
-            if (_gender == "male")
+            if (_gender == GenderOption.Male)
             {
                 _weight = _weight + _weight * .20;
             }
@@ -58,7 +57,7 @@ namespace CalculateBMICommonLib.Models
 
         public void WorkOut()
         {
-            if (_gender == "male")
+            if (_gender == GenderOption.Male)
             {
 
                 _weight = _weight + _weight * .05;
