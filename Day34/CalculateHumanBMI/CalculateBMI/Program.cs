@@ -51,7 +51,7 @@ namespace CalculateBMI
             person5.WorkOut();
             CheckEatWorkOut(person4);
             CheckEatWorkOut(person5);
-            Console.WriteLine("End Main");
+            Console.WriteLine("\nEnd Main............");
         }
 
         public static void PrintDetails(ArrayList listOfHuman)
@@ -66,7 +66,7 @@ namespace CalculateBMI
         }
         public static void CheckEatWorkOut(HumanBeing human)
         {
-            Console.WriteLine($"\nName: {human.Name} Age: {human.Age} Gender : {human.Gender} Weight : {human.Weight} Height : {human.Height} BMI : {human.BMI()} BodyStructure : {human.GetBodyStructure()}"); 
+            Console.WriteLine($"\nName: {human.Name} || Age: {human.Age} || Gender : {human.Gender} || Weight : {human.Weight} || Height : {human.Height}"); 
         }
     }
 }
