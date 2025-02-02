@@ -19,8 +19,9 @@ namespace CollectionApp
             basket.Add(new OrderItem(2, "Ragi", 60, 4));
             basket.Add(new OrderItem(3, "Biscuts", 20, 10));
             basket.Add(new OrderItem(4, "Rice", 65, 10));
-
-            basket.Add("Shalini"); // we can add anything in the basket because its derived from ArrayList we can add string , int ..etc...
+           
+            //basket.Add("Shalini"); // we can add anything in the basket because its derived from ArrayList we can add string , int ..etc...
+            //but we have to unbox the string in to ArrayList
             PrintDetails(basket);
         }
 

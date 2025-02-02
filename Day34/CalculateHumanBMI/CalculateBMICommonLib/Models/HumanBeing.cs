@@ -60,7 +60,7 @@ namespace CalculateBMICommonLib.Models
             if (_gender == GenderOption.Male)
             {
 
-                _weight = _weight + _weight * .05;
+                _weight = _weight - _weight * .05;
                 _height = _height + _height * .02;
             }
             else
