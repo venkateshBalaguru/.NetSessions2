@@ -9,7 +9,7 @@ namespace MyAttributeApp
         {
 
             List<MethodInfo> methodAttribute = new List<MethodInfo>();
-            MethodInfo[] methods = typeof(Test).GetMethods();
+            MethodInfo[] methods = typeof(MyAttribute).GetMethods();
 
 
             foreach (MethodInfo method in methods)
@@ -23,7 +23,7 @@ namespace MyAttributeApp
             }
             foreach (MethodInfo method in methodAttribute)
             {
-                Console.WriteLine($"This method : \"{method.Name}\" needs Priority.");
+                Console.WriteLine($"This \"{method.Name}\" needs Priority.");
             }
         }
     }

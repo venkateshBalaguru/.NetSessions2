@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyAttributeApp.Models
 {
-   internal class Test
+    class ThisMethodNeedsAttentionAttribute : Attribute { }
+    internal class MyAttribute
     {
         [ThisMethodNeedsAttention]
         public void Method1() { Console.WriteLine("I am Method-1"); }
