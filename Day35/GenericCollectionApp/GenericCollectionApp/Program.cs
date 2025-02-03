@@ -1,4 +1,6 @@
 ﻿using GenericCollectionApp.Models;
+using System;
+using System.Reflection;
 
 namespace GenericCollectionApp
 {
@@ -11,6 +13,9 @@ namespace GenericCollectionApp
             basket.Add(new OrderItem { Name = "book", Quanity = 5, UnitPrice = 30, Id = 1 });//Property syntax initialization no constructor
             basket.Add(new OrderItem { UnitPrice = 10, Name = "Pen", Quanity = 5, Id = 2 });
             basket.Add(new OrderItem { Name = "Milk", Quanity = 3, UnitPrice = 35, Id = 3 });
+            Console.WriteLine(basket.GetType());
+            Assembly info = typeof(int).Assembly;
+            Console.WriteLine(info);
             Console.WriteLine(basket.Count);
             double totalCost = 0;
             foreach (OrderItem item in basket)
