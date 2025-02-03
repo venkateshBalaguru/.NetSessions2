@@ -10,11 +10,11 @@ namespace MyAttributeApp.Models
     internal class MyAttribute
     {
         [ThisMethodNeedsAttention]
-        public void Method1() { Console.WriteLine("I am Method-1"); }
-        public void Method2() { Console.WriteLine("I am Method-2"); }
-        public void Method3() { Console.WriteLine("I am Method-3"); }
+        public void Method1() {  }
+        public void Method2() {  }
+        public void Method3() {  }
         [ThisMethodNeedsAttention]
-        public void Method4() { Console.WriteLine("I am Method-4"); }
+        public void Method4() {  }
 
     }
 }
