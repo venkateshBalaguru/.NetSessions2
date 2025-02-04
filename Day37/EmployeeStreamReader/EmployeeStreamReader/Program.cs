@@ -41,10 +41,11 @@ namespace EmployeeStreamReader
             {
                 Console.WriteLine($"EmpId : {value.Id} | EmpName : {value.Name} | EmpDesigination : {value.Desigination}");
             }
-            //Grouping the Emp Data with the Desigination
+            //getting the method value in to variable
             var employee = empGroupByDesg(empData);
             PrintDetails(employee);
         }
+        //Grouping the Emp Data with the Desigination
         public static Dictionary<string, List<Employee>> empGroupByDesg(HashSet<Employee> empData)
         {
             var map = new Dictionary<string, List<Employee>>();
@@ -60,7 +61,7 @@ namespace EmployeeStreamReader
 
         public static void PrintDetails(Dictionary<string, List<Employee>> employees)
         {
-            char charToTrim = '\'';
+            char charToTrim = '\''; //Triming the unwanted characters
             foreach (var employee in employees)
             {
 

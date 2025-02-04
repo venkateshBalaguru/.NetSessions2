@@ -14,7 +14,7 @@ namespace AccountTransactionApp.Models
         private readonly string _name;
         private double _balance;
         private const double MIN_BALANCE = 500;
-        private List<TransactionAccount> _transactions;// = new List<TransactionAccount>();
+        private List<TransactionAccount> _transactions =  new List<TransactionAccount>();
 
         public Account(int accountNumber, string name, double balance)
         {
