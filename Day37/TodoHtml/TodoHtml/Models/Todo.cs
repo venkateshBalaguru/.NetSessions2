@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TodoHtml.Models
+namespace TodoList_1.Models
 {
     public class Todo
     {

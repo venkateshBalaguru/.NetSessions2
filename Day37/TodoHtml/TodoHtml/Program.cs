@@ -1,5 +1,5 @@
-﻿using TodoHtml.Models;
-namespace TodoHtml
+﻿using TodoList_1.Models;
+namespace TodoList_1
 {
 
         internal class Program
