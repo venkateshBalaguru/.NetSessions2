@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Linq;
 using EmployeeStreamReader.Models;
 
 namespace EmployeeStreamReader
@@ -62,10 +63,10 @@ namespace EmployeeStreamReader
         public static void PrintDetails(Dictionary<string, List<Employee>> employees)
         {
             char charToTrim = '\''; //Triming the unwanted characters
+            Console.WriteLine($"\nGrouping By Desigination:\n===========================");
             foreach (var employee in employees)
             {
-
-                Console.WriteLine($"\nGrouping By Desigination : {employee.Key.Trim(charToTrim)}\n=======================================");
+                Console.WriteLine($"\n{employee.Key.Trim(charToTrim)}\n-------------------");
                 foreach (var emp in employee.Value)
                 {
                     Console.WriteLine($"ID : {emp.Id} || Name : {emp.Name.Trim(charToTrim)}");

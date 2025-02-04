@@ -23,10 +23,10 @@ namespace CustomerHashSetApp
             var c4 = new Customer { Id = 2, Name = "Minu" };
 
 
-            //Console.WriteLine(c1.GetHashCode());
-            //Console.WriteLine(c2.GetHashCode());
-            //Console.WriteLine(c3.GetHashCode());
-            //Console.WriteLine(c4.GetHashCode());
+            Console.WriteLine(c1.GetHashCode());
+            Console.WriteLine(c2.GetHashCode());
+            Console.WriteLine(c3.GetHashCode());
+            Console.WriteLine(c4.GetHashCode());
 
             var uniqueCustomers = new HashSet<Customer>();
             uniqueCustomers.Add(c1);
