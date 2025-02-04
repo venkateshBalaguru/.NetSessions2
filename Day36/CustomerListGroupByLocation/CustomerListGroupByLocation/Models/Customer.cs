@@ -26,22 +26,10 @@ namespace CustomerListGroupByLocation.Models
         //    }
         //    return false;
         //}
-        public override string ToString()
-        {
-            return $"id is  {this.Id} , name is {this.Name}";
-        }
+        //public override string ToString()
+        //{
+        //    return $"ID : {this.Id} | Name : {this.Name} | Location : {this.Location}";
+        //}
 
-        public static Dictionary<string, Customer> CustomerGroupByLocation(List<Customer> customers)
-        {
-            var groupByLocation = new Dictionary<string, Customer>();
-            foreach (Customer customer in customers)
-            {
-                if (!groupByLocation.ContainsKey(customer.Location))
-                    groupByLocation.Add(customer.Location, customer);
-                else
-                    groupByLocation[customer.Location] = customer;
-            }
-            return groupByLocation;
-        }
-        }
     }
+}
