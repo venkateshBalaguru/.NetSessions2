@@ -68,7 +68,7 @@
                 outputArray[j] = output;
                 j++;
             }
-            Console.WriteLine(typeof(Program));
+            
             Console.WriteLine("\nAfter Split the String without Inbuild function\n============================================");
             PrintDetails(outputArray);
         }
