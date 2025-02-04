@@ -8,10 +8,6 @@ namespace EmployeeStreamReader.Models
 {
     internal class Employee
     {
-        //public int Id { get; set; }
-        //public string Name { get; set; }
-        //public string Desigination { get; set; }
-
         private int _id;
         private string _name;
         private string _desigination;
@@ -42,9 +38,9 @@ namespace EmployeeStreamReader.Models
         }
         return false;
     }
-    public override string ToString()
-    {
-        return $"id is  {this.Id} , name is {this.Name} , desigination is {this.Desigination}";
-    }
+    //public override string ToString()
+    //{
+    //    return $"id is  {this.Id} , name is {this.Name} , desigination is {this.Desigination}";
+    //}
 }
 }

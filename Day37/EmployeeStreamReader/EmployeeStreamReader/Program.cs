@@ -8,14 +8,18 @@ namespace EmployeeStreamReader
         static void Main(string[] args)
         {
             string filePath = "C:\\venkat-html-app\\DotNetSessions\\Day37\\Employee.csv";
-            HashSet<Employee> empData = new HashSet<Employee>();
+            HashSet<Employee> empData = new HashSet<Employee>();  //using HashSet for getting the unique values
 
+
+            //Reading the file 
             using (StreamReader sr = new StreamReader(filePath))
             {
                 string line;
-                bool isFirstLine = true;
+                bool isFirstLine = true;  //For Ignoring the first line
+                //Iterating until null
                 while ((line = sr.ReadLine()) != null)
                 {
+                    //First line caption was removing and inserting the remaining lines
                     if (isFirstLine)
                     {
                         isFirstLine = false;
@@ -24,17 +28,20 @@ namespace EmployeeStreamReader
                     string[] values = line.Split(',');
                     for (int i = 0; i < 1; i++)
                     {
-                        var empId = Convert.ToInt32(values[i]);
+                        var empId = Convert.ToInt32(values[i]); 
                         empData.Add(new Employee(empId, values[i + 1], values[i + 2]));
                     }
                 }
                 sr.Close();
             }
+
+            //Printing the employees Details from the file with only Unique datas
+            Console.WriteLine("Details of the Employees\n==========================");
             foreach (var value in empData)
             {
                 Console.WriteLine($"EmpId : {value.Id} | EmpName : {value.Name} | EmpDesigination : {value.Desigination}");
             }
-
+            //Grouping the Emp Data with the Desigination
             var employee = empGroupByDesg(empData);
             PrintDetails(employee);
         }
@@ -53,12 +60,14 @@ namespace EmployeeStreamReader
 
         public static void PrintDetails(Dictionary<string, List<Employee>> employees)
         {
+            char charToTrim = '\'';
             foreach (var employee in employees)
             {
-                Console.WriteLine(employee.Key);
+
+                Console.WriteLine($"\nGrouping By Desigination : {employee.Key.Trim(charToTrim)}\n=======================================");
                 foreach (var emp in employee.Value)
                 {
-                    Console.WriteLine($"ID : {emp.Id} || Name : {emp.Name}");
+                    Console.WriteLine($"ID : {emp.Id} || Name : {emp.Name.Trim(charToTrim)}");
                 }
             }
         }
