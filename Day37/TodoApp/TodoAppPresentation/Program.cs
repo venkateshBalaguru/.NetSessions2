@@ -1,5 +1,5 @@
 ﻿using TodoCommonLib.Models;
-namespace TodoPresentationLayer
+namespace TodoAppPresentation
 {
     internal class Program
     {

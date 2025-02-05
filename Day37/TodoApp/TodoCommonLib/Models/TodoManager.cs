@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace TodoCommonLib.Models
 {
-
     public class TodoManager
     {
-
         public static void AddTodoList(string desc, string prioritize)
         {
             var details = $"{desc},{prioritize}";
