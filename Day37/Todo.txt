@@ -1,3 +1,8 @@
 Work1,Normal
 Work2,Hight
 Work3,Moderate
+Work4,Normal
+Work5,High
+Work6,High
+Work 7,Normal
+Work8,Moderate

@@ -1,12 +1,12 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TodoList_1.Models
+namespace TodoCommonLib.Models
 {
+
     public class TodoManager
     {
 

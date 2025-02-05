@@ -5,14 +5,14 @@ namespace TodoList_1.Models
     public class Todo
     {
         private static int _id = 0;
-        private  string _description;
-        private  string _priority;
+        private string _description;
+        private string _priority;
         public Todo(string description, string priority)
         {
             _id++;
             _description = description;
             _priority = priority;
-            
+
 
         }
 

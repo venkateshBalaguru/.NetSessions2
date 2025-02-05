@@ -9,6 +9,7 @@ namespace EmployeeStreamReader
         static void Main(string[] args)
         {
             string filePath = "C:\\venkat-html-app\\DotNetSessions\\Day37\\Employee.csv";
+            char charToTrim = '\'';
             HashSet<Employee> empData = new HashSet<Employee>();  //using HashSet for getting the unique values
 
 
@@ -40,7 +41,7 @@ namespace EmployeeStreamReader
             Console.WriteLine("Details of the Employees\n==========================");
             foreach (var value in empData)
             {
-                Console.WriteLine($"EmpId : {value.Id} | EmpName : {value.Name} | EmpDesigination : {value.Desigination}");
+                Console.WriteLine($"EmpId : {value.Id} | EmpName : {value.Name.Trim(charToTrim)} | EmpDesigination : {value.Desigination.Trim(charToTrim)}");
             }
             //getting the method value in to variable
             var employee = empGroupByDesg(empData);
