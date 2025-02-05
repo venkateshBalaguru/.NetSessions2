@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLayer", "{B94DC35F-009A-40E4-A322-2E1ABDF1285F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PresentationLayer", "PresentationLayer", "{0CEB2E79-FA23-4C82-B047-7E5D3E14094D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlSerializationDeserializationCommonLib", "XmlSerializationDeserializationCommonLib\XmlSerializationDeserializationCommonLib.csproj", "{17DF5281-30F8-4CD5-834B-64DA6F003927}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlSerialization", "XmlSerialization\XmlSerialization.csproj", "{F7B3DF1D-393D-4282-92BE-4817BC142C9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDeSerialization", "XmlDeSerialization\XmlDeSerialization.csproj", "{21FCB45D-5098-4122-BC75-9C0D0C883AD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17DF5281-30F8-4CD5-834B-64DA6F003927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DF5281-30F8-4CD5-834B-64DA6F003927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DF5281-30F8-4CD5-834B-64DA6F003927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17DF5281-30F8-4CD5-834B-64DA6F003927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B3DF1D-393D-4282-92BE-4817BC142C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B3DF1D-393D-4282-92BE-4817BC142C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B3DF1D-393D-4282-92BE-4817BC142C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B3DF1D-393D-4282-92BE-4817BC142C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21FCB45D-5098-4122-BC75-9C0D0C883AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FCB45D-5098-4122-BC75-9C0D0C883AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FCB45D-5098-4122-BC75-9C0D0C883AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FCB45D-5098-4122-BC75-9C0D0C883AD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17DF5281-30F8-4CD5-834B-64DA6F003927} = {B94DC35F-009A-40E4-A322-2E1ABDF1285F}
+		{F7B3DF1D-393D-4282-92BE-4817BC142C9F} = {0CEB2E79-FA23-4C82-B047-7E5D3E14094D}
+		{21FCB45D-5098-4122-BC75-9C0D0C883AD5} = {0CEB2E79-FA23-4C82-B047-7E5D3E14094D}
+	EndGlobalSection
+EndGlobal

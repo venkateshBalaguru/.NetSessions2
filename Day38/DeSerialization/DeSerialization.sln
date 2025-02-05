@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLayer", "{3C63C9A7-9196-4ACF-B3E5-C4BE81616F73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PresentationLayer", "PresentationLayer", "{B97525F9-910B-4FAB-B3A0-69BF58191649}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLib", "CommonLib\CommonLib.csproj", "{2BBB2D84-2E5B-4E46-A8CC-77908786E038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deserialization", "Deserialization\Deserialization.csproj", "{BFBFBA17-51D6-43B0-A7D2-54946A3D264A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BBB2D84-2E5B-4E46-A8CC-77908786E038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBB2D84-2E5B-4E46-A8CC-77908786E038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBB2D84-2E5B-4E46-A8CC-77908786E038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBB2D84-2E5B-4E46-A8CC-77908786E038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBFBA17-51D6-43B0-A7D2-54946A3D264A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBFBA17-51D6-43B0-A7D2-54946A3D264A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBFBA17-51D6-43B0-A7D2-54946A3D264A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBFBA17-51D6-43B0-A7D2-54946A3D264A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2BBB2D84-2E5B-4E46-A8CC-77908786E038} = {3C63C9A7-9196-4ACF-B3E5-C4BE81616F73}
+		{BFBFBA17-51D6-43B0-A7D2-54946A3D264A} = {B97525F9-910B-4FAB-B3A0-69BF58191649}
+	EndGlobalSection
+EndGlobal
