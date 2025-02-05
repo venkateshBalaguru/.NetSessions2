@@ -9,7 +9,8 @@ namespace TodoList_1
             Console.WriteLine("Todo App\n========");
             Console.WriteLine("1. Add Todo");
             Console.WriteLine("2. Display Todo");
-            Console.WriteLine("3. Exit");
+            Console.WriteLine("3. Remove Todo's by Description");
+            Console.WriteLine("4. Exit");
             Console.Write("\nEnter the Number to Proceed : ");
             int number = Convert.ToInt32(Console.ReadLine());
 
@@ -24,8 +25,11 @@ namespace TodoList_1
             }
             else if (number == 3) 
             {
-                Console.WriteLine("Exit the App"); 
+                TodoManager.RemoveTodo();
+                ToContinue();
             }
+            else if (number == 4)
+                Console.WriteLine("Exit the App");
             else 
             { 
                 Console.WriteLine( "Enter the Correct Option");

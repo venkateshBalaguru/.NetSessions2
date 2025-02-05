@@ -9,7 +9,6 @@ namespace TodoList_1.Models
 {
     public class TodoManager
     {
-
         public static void AddTodoList(string desc, string prioritize)
         {
             var details = $"{desc},{prioritize}";
@@ -20,7 +19,15 @@ namespace TodoList_1.Models
             sw.Close();
             fs.Close();
         }
-
+        public static void RemoveTodo()
+        {
+            Console.WriteLine("Enter the Description to Remove from Todo List");
+            var remove = Console.ReadLine();
+            string filePath = "C:\\venkat-html-app\\DotNetSessions\\Day37\\Todo.txt";
+            List<string> lstItem = File.ReadAllLines(filePath).Where(arg => !string.IsNullOrWhiteSpace(arg)).ToList();
+            lstItem.RemoveAll(x => x.Split(',')[0].Equals(remove));
+            File.WriteAllLines(filePath,lstItem);
+        }
         public static void DisplayTodoList()
         {
             string filePath = "C:\\venkat-html-app\\DotNetSessions\\Day37\\Todo.txt";
