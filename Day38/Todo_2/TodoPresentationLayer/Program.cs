@@ -14,13 +14,23 @@ namespace TodoPresentationLayer
             {
                 Console.WriteLine("1. Add Todo");
                 Console.WriteLine("2. Display Todos");
-                Console.WriteLine("3. Exit");
+                Console.WriteLine("3. SerializeToJson");
+                Console.WriteLine("4. Exit");
                 Console.Write("Choose an option: ");
                 string choice = Console.ReadLine();
 
                 if (choice == "1")
                 {
                     todoManager.AddTodo();
+                    Console.WriteLine("Todo added sucessfully..");
+                    
+                }
+                else if (choice == "2")
+                {
+                    DisplayTodos(todoManager.GetTodos());
+                }
+                else if (choice == "3")
+                {
                     var file = todoManager.GetTodos();
                     var jsonString = JsonSerializer.Serialize(file);
                     Console.WriteLine(jsonString);
@@ -29,20 +39,7 @@ namespace TodoPresentationLayer
                     sw.Close();
                     Console.WriteLine("Written to File...");
                 }
-                else if (choice == "2")
-                {
-                    var sr = new StreamReader(@"C:\venkat-html-app\DotNetSessions\Day38\Todo_2\Cus1.json");
-                    var jsonString = sr.ReadToEnd();
-                    //Console.WriteLine(jsonString);
-                    //Deserialization will create a new object without using new keyword it will happen in background but the fields must be public otherwise it will throw error
-                    var todos = JsonSerializer.Deserialize<Todo>(jsonString);
-                    Console.WriteLine("After Deserialized :");
-                    Console.WriteLine($"Discription : {todos.Description} | Priority : {todos.Priority}");
-                    
-                    DisplayTodos(todos);
-
-                }
-                else if (choice == "3")
+                else if (choice == "4")
                 {
                     exit = true;
                 }
@@ -56,7 +53,7 @@ namespace TodoPresentationLayer
             Console.WriteLine("Thank you for using the Todo app.");
         }
 
-        static void DisplayTodos(Todo todos)
+        static void DisplayTodos(List<Todo> todos)
         {
             Console.WriteLine("Todos:");
 
