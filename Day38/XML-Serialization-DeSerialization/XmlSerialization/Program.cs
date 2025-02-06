@@ -1,11 +1,16 @@
-﻿using System.Text.Json;
+﻿using System.Runtime.Serialization;
+using System.Text;
+using System.Text.Json;
 using XmlSerialization;
+using System.Xml.Serialization;
 using XmlSerializationDeserializationCommonLib.Models;
 
 namespace XmlSerialization
 {
     internal class Program
     {
+        private static readonly Stream fs;
+
         static void Main(string[] args)
         {
             SerializeToXML();
@@ -22,13 +27,18 @@ namespace XmlSerialization
                    new Address { Country = "India", City = "Madurai-Central"}
                 }
             };
-            //XmlSerialization.
-            //var jsonString = JsonSerializer.Serialize(c1);
-            //Console.WriteLine(jsonString);
-            //var sw = new StreamWriter(@"C:\venkat-html-app\DotNetSessions\Day38\Serialization_DeSerialization\Cus1.json");
-            //sw.WriteLine(jsonString);
-            //sw.Close();
-            //Console.WriteLine("Written to File...");
+            XmlSerializer serializer = new XmlSerializer(typeof(Customer));
+            using (var xmlWriter = new StringWriter())
+            {
+                serializer.Serialize(xmlWriter, c1);
+                string xml = xmlWriter.ToString();
+                //Console.WriteLine(xml);
+                var sw = new StreamWriter(@"C:\venkat-html-app\DotNetSessions\Day38\XML-Serialization-DeSerialization\Cus1.xml");
+                sw.WriteLine(xml);
+                sw.Close();
+                Console.WriteLine("Written to File...");
+            }
         }
     }
 }
+
