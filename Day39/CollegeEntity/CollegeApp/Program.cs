@@ -14,7 +14,7 @@ namespace CollegeApp
             studentService.AddStudents(new Student(101, "Venkatesh", new DateOnly(2004, 12, 31), Branch.BE));
             studentService.AddStudents(new Student(102, "Balagurunathan", new DateOnly(2004, 12, 24), Branch.BCom));
             studentService.AddStudents(new Student(103, "Sachin", new DateOnly(2005, 04, 10), Branch.BSc));
-            PrintDetails(studentService);
+            //PrintDetails(studentService);
             var studentfromstu = studentService.DisplayStudents();
             PrintDetails(studentfromstu);
 
@@ -24,14 +24,14 @@ namespace CollegeApp
             professorService.AddProfessor(new Professor(204, "Jayapretthi", new DateOnly(1992, 6, 3), 40000));
             PrintDetails(professorService);
         }
-        private static void PrintDetails(StudentService studentService)
-        {
-            Console.WriteLine("student detials\n====================");
-            foreach (var student in studentService)
-            {
-                Console.WriteLine(student);
-            }
-        }
+        //private static void PrintDetails(StudentService studentService)
+        //{
+        //    Console.WriteLine("student detials\n====================");
+        //    foreach (var student in studentService)
+        //    {
+        //        Console.WriteLine(student);
+        //    }
+        //}
 
         private static void PrintDetails(List<Student> students) 
         {
