@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CollegeEntityCommonLib.Models
+namespace SingleTonPatternApp.Services
 {
-    internal interface Person
+    internal class ConfigServices
     {
     }
 }

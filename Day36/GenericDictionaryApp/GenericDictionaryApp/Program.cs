@@ -11,7 +11,7 @@ namespace GenericDictionaryApp
         {
             //CaseStudy1();
             CaseStudy2();
-            CaseStudy3();
+            //CaseStudy3();
 
         }
 
