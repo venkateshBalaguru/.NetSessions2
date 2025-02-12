@@ -1,6 +1,7 @@
 ﻿using System.Data.SqlTypes;
 using System.Diagnostics;
 using Microsoft.Data.SqlClient;
+
 namespace CRUDOnProductTable
 {
     internal class Program
