@@ -1,5 +1,4 @@
 ﻿using Microsoft.Data.SqlClient;
-using Microsoft.Identity.Client;
 
 namespace UserLoginAppwithSqlInjection
 {
@@ -7,29 +6,32 @@ namespace UserLoginAppwithSqlInjection
     {
         static void Main(string[] args)
         {
-            CaseStudy1();
-            //CaseStudy2();
+            //CaseStudy1();
+            CaseStudy2();
         }
         public static void CaseStudy2()
         {
             var connectionString = "server=.\\sqlexpress;database=rrd_db1;Integrated security=true;TrustServerCertificate=true";
             using (var con = new SqlConnection(connectionString))
             {
-                Console.Write("Enter the User Name : ");
-                var userName = Console.ReadLine();
+                Console.Write("Enter the User Id : ");
+                var userId = Console.ReadLine();
                 Console.Write("Enter the Password : ");
                 var userPwd = Console.ReadLine();
 
-                var cmd = new SqlCommand($"select * from userlogin where username = {userName} and userpwd = {userPwd}", con);
-                //cmd.Parameters.AddWithValue("@userName", userName);
-                //cmd.Parameters.AddWithValue("@userPwd", userPwd);
-
+                //var cmd = new SqlCommand("select * from userlogin where id = " + userId + " and userpwd  = '" + userPwd + "'", con);
+                //var cmd = new SqlCommand("SELECT * FROM USERLOGIN WHERE ID = " + userId + " AND USERPWD = '" + userPwd + "'", con);
+                var cmd = new SqlCommand($"Select * from userlogin where id = {userId} and userpwd = {userPwd}", con);
                 con.Open();
                 var reader = cmd.ExecuteReader();
-                while (reader.Read())
+                if (reader.Read())
                 {
-                    Console.WriteLine("\nRRD Home Page\n");
+                    Console.WriteLine("\nLogged Successfully\n");
                     Console.WriteLine(reader["msg"]);
+                }
+                else
+                {
+                    Console.WriteLine("Login failed");
                 }
                 con.Close();
             }
@@ -50,10 +52,14 @@ namespace UserLoginAppwithSqlInjection
 
                 con.Open();
                 var reader = cmd.ExecuteReader();
-                while (reader.Read())
+                if (reader.Read())
                 {
-                    Console.WriteLine("\nRRD Home Page\n");
+                    Console.WriteLine("\nLogged Successfully\n");
                     Console.WriteLine(reader["msg"]);
+                }
+                else
+                {
+                    Console.WriteLine("Login failed");
                 }
                 con.Close();
             }

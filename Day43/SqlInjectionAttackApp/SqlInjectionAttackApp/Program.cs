@@ -6,8 +6,9 @@ namespace SqlInjectionAttackApp
     {
         static void Main(string[] args)
         {
-            CaseStudy1();//Sql injection it will affect
+            //CaseStudy1();//Sql injection it will affect
             //CaseStudy2();//Solution for sql injection
+        
            
         }
 
@@ -50,5 +51,6 @@ namespace SqlInjectionAttackApp
             }
             con.Close();
         }
+        
     }
 }

@@ -18,27 +18,32 @@ namespace TodoAppPresentation
             {
                 EnterDetails();
             }
-            //else if (number == 2)
-            //{
-            //    Console.WriteLine(TodoManager.DisplayTodoList());
-            //    ToContinue();
-            //}
-            //else if (number == 3)
-            //{
-            //    Console.Write("Enter the Id number to Update from the List : ");
-            //    var updateNumber = Convert.ToInt32(Console.ReadLine());
-            //    Console.WriteLine("Enter the Priority to Update");
-            //    var updatePriority = Console.ReadLine();
-            //    Console.WriteLine(TodoManager.UpdateTodo(updateNumber, updatePriority));
-            //    ToContinue();
-            //}
-            //else if (number == 4)
-            //{
-            //    Console.Write("Enter the Id number to remove from the List : ");
-            //    var removeNumber = Convert.ToInt32(Console.ReadLine());
-            //    Console.WriteLine(TodoManager.RemoveTodo(removeNumber));
-            //    ToContinue();
-            //}
+            else if (number == 2)
+            {
+                //var items = new List<string>();
+                var items = TodoManager.DisplayTodoList();
+                foreach (var item in items)
+                {
+                    Console.WriteLine(item);
+                }
+                ToContinue();
+            }
+            else if (number == 3)
+            {
+                Console.Write("Enter the Id number to Update from the List : ");
+                var updateNumber = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter the Priority to Update");
+                var updatePriority = Console.ReadLine();
+                Console.WriteLine(TodoManager.UpdateTodo(updateNumber, updatePriority));
+                ToContinue();
+            }
+            else if (number == 4)
+            {
+                Console.Write("Enter the Id number to remove from the List : ");
+                var removeNumber = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(TodoManager.RemoveTodo(removeNumber));
+                ToContinue();
+            }
             else if (number == 5)
             {
                 Console.WriteLine("Exit the App");
@@ -56,8 +61,8 @@ namespace TodoAppPresentation
             var desc = Console.ReadLine();
             Console.WriteLine("Enter the Priority");
             var prioritize = Console.ReadLine();
-            var result = TodoManager.AddTodoList(desc, prioritize);
-            Console.WriteLine(result);
+            TodoManager.AddTodoList(desc, prioritize);
+            
             ToContinue();
         }
         public static void ToContinue()
