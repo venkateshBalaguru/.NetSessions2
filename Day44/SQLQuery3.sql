@@ -1,0 +1,6 @@
+CREATE FUNCTION myTimeStamb (@date DATETIME)
+RETURNS int
+AS
+BEGIN
+    RETURN FORMAT(GETDATE(), 'yyyyMMddhhmmss');
+END;
