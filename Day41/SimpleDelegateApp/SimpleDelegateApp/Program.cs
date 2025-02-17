@@ -35,6 +35,7 @@
         }
         public static void CaseStudy2()
         {
+            //multicasting
             DPrintMsg x;
             x = Hello;
             x += GoodBye1;//It is like x.add
