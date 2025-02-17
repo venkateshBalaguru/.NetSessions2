@@ -1,0 +1,178 @@
+CREATE TABLE DEPT1 (
+ DEPT1NO              integer NOT NULL,
+ DNAME               varchar(14),
+ LOC                 varchar(13),
+ CONSTRAINT DEPT1_PRIMARY_KEY PRIMARY KEY (DEPT1NO));
+
+ INSERT INTO DEPT1 VALUES (10,'ACCOUNTING','NEW YORK');
+INSERT INTO DEPT1 VALUES (20,'RESEARCH','DALLAS');
+INSERT INTO DEPT1 VALUES (30,'SALES','CHICAGO');
+INSERT INTO DEPT1 VALUES (40,'OPERATIONS','BOSTON');
+
+CREATE TABLE EMP1 (
+ EMP1NO               integer NOT NULL,
+ ENAME               varchar(10),
+ JOB                 varchar(9),
+ MGR                 integer CONSTRAINT EMP1_SELF_KEY REFERENCES EMP1 (EMP1NO),
+ HIREDATE            DATEtime,
+ SAL                 money,
+ COMM                money,
+ DEPT1NO              integer NOT NULL,
+ CONSTRAINT EMP1_FOREIGN_KEY FOREIGN KEY (DEPT1NO) REFERENCES DEPT1 (DEPT1NO),
+ CONSTRAINT EMP1_PRIMARY_KEY PRIMARY KEY (EMP1NO));
+
+ INSERT INTO EMP1 VALUES (7839,'KING','PRESIDENT',NULL,'17-NOV-81',5000,NULL,10);
+INSERT INTO EMP1 VALUES (7698,'BLAKE','MANAGER',7839,'1-MAY-81',2850,NULL,30);
+INSERT INTO EMP1 VALUES (7782,'CLARK','MANAGER',7839,'9-JUN-81',2450,NULL,10);
+INSERT INTO EMP1 VALUES (7566,'JONES','MANAGER',7839,'2-APR-81',2975,NULL,20);
+INSERT INTO EMP1 VALUES (7654,'MARTIN','SALESMAN',7698,'28-SEP-81',1250,1400,30);
+INSERT INTO EMP1 VALUES (7499,'ALLEN','SALESMAN',7698,'20-FEB-81',1600,300,30);
+INSERT INTO EMP1 VALUES (7844,'TURNER','SALESMAN',7698,'8-SEP-81',1500,0,30);
+INSERT INTO EMP1 VALUES (7900,'JAMES','CLERK',7698,'3-DEC-81',950,NULL,30);
+INSERT INTO EMP1 VALUES (7521,'WARD','SALESMAN',7698,'22-FEB-81',1250,500,30);
+INSERT INTO EMP1 VALUES (7902,'FORD','ANALYST',7566,'3-DEC-81',3000,NULL,20);
+INSERT INTO EMP1 VALUES (7369,'SMITH','CLERK',7902,'17-DEC-80',800,NULL,20);
+INSERT INTO EMP1 VALUES (7788,'SCOTT','ANALYST',7566,'09-DEC-82',3000,NULL,20);
+INSERT INTO EMP1 VALUES (7876,'ADAMS','CLERK',7788,'12-JAN-83',1100,NULL,20);
+INSERT INTO EMP1 VALUES (7934,'MILLER','CLERK',7782,'23-JAN-82',1300,NULL,10);
+
+---------Display all EMP1loyee names in descending order
+
+SELECT ENAME 
+FROM EMP1
+ORDER BY ENAME DESC
+
+---- Display all the EMP1loyee name, salary, commission of EMP1 in depno 10 
+
+SELECT ENAME,SAL,COMM,DEPT1NO
+FROM EMP1
+WHERE DEPT1NO=10
+ORDER BY ENAME DESC
+
+----- Display all EMP1loyees in DEPT1no 10 as wellas DEPT1no.20
+
+SELECT* 
+FROM EMP1
+WHERE DEPT1NO=10 OR DEPT1NO=20
+
+----Display all EMP1loyees who are managers
+
+SELECT *
+FROM EMP1
+WHERE JOB='MANAGER'
+
+---------Display all the EMP1loyees who doesnt have commission
+SELECT *
+FROM EMP1
+WHERE COMM IS NULL
+
+--- Calculate annual CTC of the EMP1loyee
+SELECT COMM + SAL AS CTC , COMM,SAL
+FROM EMP1
+
+--- Calculate annual CTC of the EMP1loyee FUNCTION
+
+SELECT ISNULL(COMM,0),COMM
+FROM EMP1
+
+SELECT 12 * (ISNULL(COMM,0) + SAL) AS CTC , COMM,SAL FROM EMP1
+
+-----Display min, max, avg and sum of the salary
+
+SELECT MIN (SAL) AS 'MIN',MAX(SAL)AS 'MAX', AVG (SAL) AS'AVG', SUM(SAL) AS 'SUM' 
+FROM EMP1
+
+-----Display current date
+
+SELECT GETDATE() AS 'TODAY', ENAME
+FROM EMP1
+
+--DEPT1wise number of EMP1loyees
+
+SELECT DEPT1NO ,COUNT(*)
+FROM EMP1
+GROUP BY DEPT1NO
+
+SELECT DEPT1NO ,COUNT(*) AS [COUNT]
+FROM EMP1
+GROUP BY DEPT1NO
+ORDER BY [COUNT] DESC
+
+-- distic, unique DEPT1 from EMP1
+SELECT DISTINCT DEPT1NO
+FROM EMP1
+SELECT * FROM DEPT1
+
+----- Inner join
+
+SELECT DNAME,ENAME
+FROM EMP1 INNER JOIN DEPT1
+ON EMP1.DEPT1NO = DEPT1.DEPT1NO
+
+----- Outer join
+
+SELECT DEPT1.DEPT1NO,DEPT1.DNAME,EMP1.ENAME
+FROM DEPT1 LEFT OUTER JOIN EMP1
+ON EMP1.DEPT1NO = DEPT1.DEPT1NO
+WHERE EMP1.ENAME IS NULL
+
+-----select all EMP1loyees and managers
+
+select * from EMP1
+select x.ENAME,x.MGR,y.ENAME as Manager,y.EMP1NO
+from EMP1 x inner join EMP1 y
+on x.MGR = y.EMP1NO
+
+select x.ENAME,x.MGR,y.ENAME as Manager,y.EMP1NO
+from EMP1 x left join EMP1 y
+on x.MGR = y.EMP1NO
+order by x.ENAME
+
+SELECT E.ENAME,D.DNAME--,MGR.ENAME as 'Manager'
+FROM EMP1 E JOIN DEPT1 D
+ON E.DEPT1NO = D.DEPT1NO
+JOIN EMP1 MGR
+ON  E.MGR = MGR.EMP1NO
+ORDER BY E.ENAME
+--- tasnactions
+create table dummy1 (id int)
+
+insert into dummy1 values(100);
+select * from dummy1;
+insert into dummy1 values(5);
+insert into dummy1 values(51);
+insert into dummy1 values(3);
+
+
+begin transaction txn
+  begin try 
+   insert into dummy values(566);
+   insert into DEPT1 values(10,'it','locaiton');
+   select * from dummy
+
+   commit
+   end try
+   begin catch
+     rollback
+   end catch
+ commit
+
+ select * from dummy
+ -- insert,update,delete
+
+create procedure GetEMP1Details 
+ as
+begin
+  SELECT E.ENAME, D.DNAME, MGR.ENAME  as 'Manager'
+	FROM EMP1 E JOIN DEPT1 D
+	ON E.DEPT1NO = D.DEPT1NO
+	JOIN EMP1 MGR
+	ON  E.MGR = MGR.EMP1NO
+	ORDER BY E.ENAME;
+ end;
+
+ exec GetEMP1Details
+
+ sp_helptext 'GEtEMP1Details'
+ 
+ select getDate();
