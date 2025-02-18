@@ -80,7 +80,7 @@ namespace EmployeeStreamReader
         private static void FindEmpName(HashSet<Employee> empData)
         {
             var employee = empData.Single(x => x.Name == "'KING'");
-            Console.WriteLine("select employee Name is King");
+            Console.WriteLine("\nselect employee Name is King\n==============================\n");
             Console.WriteLine($"{employee.Id} | {employee.Name} | {employee.MgrID} | {employee.Desigination} ");
         }
 
@@ -88,7 +88,7 @@ namespace EmployeeStreamReader
         {
             var DeptList = empData.Where(e => e.DeptNo.Contains("10")).AsEnumerable();
             var enumerator = DeptList.GetEnumerator();
-            Console.WriteLine("Select Dept where dept Id=10");
+            Console.WriteLine("\nSelect Dept where dept Id=10\n===============================\n");
             while (enumerator.MoveNext())
             {
                 var employee = enumerator.Current;
@@ -98,7 +98,7 @@ namespace EmployeeStreamReader
 
         private static void EmpMgrId(HashSet<Employee> empData)
         {
-            Console.WriteLine("Select Manager from list");
+            Console.WriteLine("\nSelect Manager from list\n===========================\n");
             var ManagerIdList = empData.Where(e => e.Desigination.Contains("MANAGER")).AsEnumerable();
             var enumerator = ManagerIdList.GetEnumerator();
             while (enumerator.MoveNext())
