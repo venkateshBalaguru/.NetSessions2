@@ -55,6 +55,7 @@
             btnHello.Text = "Hello";
             btnHello.UseVisualStyleBackColor = true;
             btnHello.Click += btnHello_Click;
+            btnHello.Click += btnMyHelloClick_Handler;
             // 
             // btnPrintviaThread
             // 
