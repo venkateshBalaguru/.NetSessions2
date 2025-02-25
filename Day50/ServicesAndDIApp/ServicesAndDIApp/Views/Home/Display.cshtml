@@ -1,1 +1,46 @@
-﻿<h1>Welcome to view Page</h1>
+﻿@* ﻿
+<html>
+
+</html>
+@for (int i = 1; i < 5; i++)
+{
+    <h1>Hello Dipslay</h1>
+
+} *@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body bgcolor="Yellow">
+    <header>
+        <h1>Sample Login Page</h1>
+    </header>
+    <script src="../wwwroot/js/jquery-3.7.1.js"></script>
+   <main>
+        
+        <h1>RRD Login Page</h1>
+        <form method="get" action="signin.asp">
+            <label for="SigIn ">SignIn:</label>
+            <input id="sigIn" Name="SigIn" type="text" placeholder="Your Mail" required />
+            <br><br>
+            <label for="Password">Password:</label>
+            <input id="Pass" Name="Pass" type="password" placeholder="Password is case sensitive" required />
+            <br><br>
+            <input type="Submit" value="Submit">
+            <input type="Reset" value="Reset">
+        </form>
+
+    
+   
+       </main>
+    <footer>
+        <p>Copy right 2020 &COPY; </p>
+    </footer>
+    <script src="../js/FadeOut.js"></script>
+</body>
+</html>
