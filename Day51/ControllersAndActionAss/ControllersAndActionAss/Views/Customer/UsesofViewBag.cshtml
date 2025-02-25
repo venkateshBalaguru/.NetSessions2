@@ -1,0 +1,13 @@
+﻿<h1>@ViewBag.Messages</h1>
+
+@{
+	ViewBag.Title = "List of UserNames";
+
+}
+<h4>Logged UserNames </h4>
+<ol>
+	@foreach(var name in ViewBag.UserNames)
+	{
+		<li>@name</li>
+	}
+</ol>

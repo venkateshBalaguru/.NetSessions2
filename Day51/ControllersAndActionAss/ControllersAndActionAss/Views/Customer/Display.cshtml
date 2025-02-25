@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ControllersAndActionAss.Models.Customer>;
+@* <h1>Display action of customer contorller</h1>
+@foreach (var cust in Model)
+{
+	<p>Id is @cust.Id</p>
+
+<p>Name of customer is  @cust.Name</p>  
+<p>Customer city is : @cust.City</p>
+} *@
+
+
+@foreach(var cust in Model)
+{
+	<p>--------------------------------</p>
+
+	<p>Id is @cust.Id</p>
+	<p>Name of customer is  @cust.Name</p>
+	<p>Address: </p>
+	foreach (var add in cust.Address)
+	{
+		<p>@add</p>
+	}
+	<p>City : @cust.City</p>
+
+}

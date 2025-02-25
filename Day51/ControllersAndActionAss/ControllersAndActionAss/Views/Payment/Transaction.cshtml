@@ -1,0 +1,13 @@
+﻿@using ControllersAndActionAss.Models;
+@model IEnumerable<ControllersAndActionAss.Models.CustomerTransaction>;
+<h1>Display Customer Transaction Details</h1>
+@foreach (var customer in Model)
+{
+	<p>Account N0 : @customer.AccountId</p>
+
+<p>Name of customer :  @customer.Name</p>
+<p>Customer city is : @customer.City</p>
+<p>Balance : @customer.Balance</p>
+
+<h4>Transaction is successfull</h4>
+}

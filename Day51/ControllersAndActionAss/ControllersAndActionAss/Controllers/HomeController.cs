@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ControllersAndActions.Controllers
+namespace ControllersAndActionAss.Controllers
 {
     public class HomeController : Controller
     {
@@ -30,7 +30,7 @@ namespace ControllersAndActions.Controllers
         public IActionResult Payment()
         {
 
-            return Redirect("https://rrd.com");
+            return RedirectToAction("Transaction","Payment");
 
         }
 
