@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ControllerStronglyTypedViews.Models.CustomerDetails>;
+﻿@using ControllerStronglyTypedViews.Models;
+
+<html>
+<head>
+    <style>
+        th, td {
+          border-style:solid;
+          border-color: #96D4D4;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Customer Details</h2>
+        @foreach(var cust in Model)
+            {
+        <table border="1">
+            
+            <thead>
+                <tr>
+                    <th>Information Type</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>@cust.Name</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>@cust.Email</td>
+                </tr>
+                <tr>
+                    <td>Phone No</td>
+                    <td>@cust.Phone</td>
+                </tr>
+                @foreach (var item in cust.Addresses)
+                {
+                    <tr>
+
+                        <td>Address @item.ID</td>
+                        <td>@item.Address1 @item.Address2 Pincode- @item.Pincode</td>
+
+                    </tr>
+                }
+            </thead>
+        </table>
+        <br/>
+        }
+    </div>
+</body>
+</html>

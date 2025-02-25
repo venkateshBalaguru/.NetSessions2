@@ -1,0 +1,24 @@
+﻿
+
+<form action="/customer/Register" method="post">
+@* 	<input type="text" name="firstName" placeholder="Enter FirstName" required/>
+	<br />
+	<input type="text" name="lastName" placeholder="Enter LastName" required/>
+	<br/> *@
+	<input type="text" name="firstName" placeholder="Enter FirstName"  />
+	<br />
+	<input type="text" name="lastName" placeholder="Enter LastName" />
+	<br />
+	<input type="submit" value="Register ME"/>
+</form>
+
+<div>
+	@if(ViewBag.Message==null)
+	{
+		<h1>Enter the Details</h1>
+	}
+	else
+	{
+		<h1>@ViewBag.Message</h1>
+	}
+</div>
