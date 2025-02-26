@@ -11,7 +11,7 @@
 
             public bool IsValid(string username, string password)
             {
-                if (userDetails.ContainsKey(username) && userDetails[username] == password)
+                if (userDetails.ContainsKey(username) && (userDetails[username] == password))
                 {
                     return true;
                 }

@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RegistrationFormValidationUsingJQuery.Services;
 
 namespace RegistrationFormValidationUsingJQuery.Controllers
 {
     public class CustomerController : Controller
     {
-
+       
         [HttpGet]
         public IActionResult Register()
         {
@@ -19,6 +20,7 @@ namespace RegistrationFormValidationUsingJQuery.Controllers
             {
                 ViewBag.Message = "Registration Failed..All fields required";  //server side validation
             }
+
             else
             {
                 ViewBag.Message = $"Hi {firstName} {lastName}!.. Registration Sucessfull, Soon we will get back to you";
