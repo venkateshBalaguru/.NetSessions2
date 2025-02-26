@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="~/CSS/styles.css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1 class="head">Welcome to RRD Login Page</h1>
+	<div class="container">
+			<form>
+				<div class="form-group">
+					<label for="user">Username:</label>
+					<input type="text" name="username" id="usernames" placeholder="Enter the UserName" class="form-control">
+					<span id="usercheck" style="color: red;">**Username is missing</span><br /><br />
+
+					<label for="password">Password:</label>
+					<input type="password" name="pass" id="password" placeholder="Enter the Password" class="form-control">
+				<span id="passcheck" style="color: red;">**Please Fill the password</span><br /><br />
+				
+				<input type="submit" id="submitbtn" value="Submit" class="btnSubmit">
+				</div>
+			</form>
+@* 		@if (ViewBag.Message == null)
+		{
+			<h1>Enter the Details.</h1>
+		}
+		else
+		{
+			<h1>@ViewBag.Message</h1>
+		} *@
+		</div>
+	<script src="/js/login.js"></script>
+</body>
+</html>

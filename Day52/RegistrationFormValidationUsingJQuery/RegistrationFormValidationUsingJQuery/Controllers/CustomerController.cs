@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace SimpleFormApp.Controllers
+namespace RegistrationFormValidationUsingJQuery.Controllers
 {
     public class CustomerController : Controller
     {
+
         [HttpGet]
         public IActionResult Register()
         {
@@ -13,7 +14,7 @@ namespace SimpleFormApp.Controllers
         [HttpPost]
         public IActionResult Register(string firstName, string lastName)
         {
-            
+
             if (firstName == null || lastName == null)
             {
                 ViewBag.Message = "Registration Failed..All fields required";  //server side validation
@@ -25,5 +26,5 @@ namespace SimpleFormApp.Controllers
             return View();
         }
     }
-    
+
 }

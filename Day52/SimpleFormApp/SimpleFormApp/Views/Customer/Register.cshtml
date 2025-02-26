@@ -4,7 +4,8 @@
 @* 	<input type="text" name="firstName" placeholder="Enter FirstName" required/>
 	<br />
 	<input type="text" name="lastName" placeholder="Enter LastName" required/>
-	<br/> *@
+	<br/>
+	This is client side validation but its not give full details*@
 	<input type="text" name="firstName" placeholder="Enter FirstName"  />
 	<br />
 	<input type="text" name="lastName" placeholder="Enter LastName" />
@@ -15,10 +16,11 @@
 <div>
 	@if(ViewBag.Message==null)
 	{
-		<h1>Enter the Details</h1>
+		<h1>Enter the Details.../This is Get Request</h1>
 	}
 	else
 	{
 		<h1>@ViewBag.Message</h1>
+		<p>This is post request</p>
 	}
 </div>
