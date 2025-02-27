@@ -1,4 +1,5 @@
 ﻿using LoginValidationAttributesApp.DTOs;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoginValidationAttributesApp.Controllers
@@ -18,11 +19,14 @@ namespace LoginValidationAttributesApp.Controllers
             {
                 return View();
             }
-
-
             //ViewBag.LoggedInUser = dto.UserName;  //This is getting the data using viewBag but we can't pass to other controller it will loss
             TempData["LoggedInUser"] = dto.UserName;
             return RedirectToAction("Index", "welcome");
+        }
+
+        public IActionResult BootstrapForm()
+        {
+            return View();
         }
     }
 }

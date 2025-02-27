@@ -1,16 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using LoginValidationAttributesApp.CustomAttributes;
 
 namespace LoginValidationAttributesApp.DTOs
 {
     public class LoginDto
     {
-        //DataAnnonations...This is serverside validation for the form showing error in client side
-        [Required(ErrorMessage = "Server says username is requried")]
-        [StringLength(10, ErrorMessage = "server says Maximum lenght is only 10 ")]
-        // [ShouldContainRRDInName()]
+        [CustomUserNameAttribute]
         public string UserName { get; set; }
 
-        [Required(ErrorMessage = "Server says password is requried")]
+        [CustomerUserPassword]
         public string UserPassword { get; set; }
     }
 }
