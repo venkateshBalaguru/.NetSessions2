@@ -1,0 +1,39 @@
+﻿﻿
+@{
+	ViewBag.ChildTitle = "Register";
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="~/CSS/styles.css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1 class="head">Welcome to HDFC Banking Registration Page</h1>
+	<div class="container">
+		<form id="RegistrationForm" method="post">
+			<div class="form-group">
+				<label for="user">First Name:</label>
+				<input type="text" name="firstname" id="firstname" placeholder="Enter the firstname">
+				<span id="usercheck" style="color: red;">**Username is missing</span><br /><br />
+
+				<label for="password">Password:</label>
+				<input type="password" name="password" id="password" placeholder="Enter the Password">
+				<span id="passcheck" style="color: red;">**Please Fill the password</span><br /><br />
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</form>
+
+		@* 		@if (ViewBag.Message == null)
+		{
+			<h1>Enter the Details.</h1>
+		}
+		else
+		{
+			<h1>@ViewBag.Message</h1>
+		} *@
+	</div>
+	<script src="/js/login.js"></script>
+</body>
+</html>
+
