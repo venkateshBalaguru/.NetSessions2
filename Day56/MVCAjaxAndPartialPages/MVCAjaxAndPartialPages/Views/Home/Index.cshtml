@@ -1,0 +1,15 @@
+﻿﻿@using MVCAjaxAndPartialPages.DTOs
+@model TimeStampDto
+@{
+    ViewBag.ChildTitle = "Home";
+    //Layout = "~/Views/Shared/_ParentLayout.cshtml";
+}
+
+<section>
+    <h4> This Home Controller Index Page</h4>
+
+    @{
+        Html.RenderPartial("_TimeStamp", new TimeStampDto { Title = "From the home controller" });
+    }
+</section>
+
