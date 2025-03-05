@@ -1,0 +1,12 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	const string COUNTER = "counter"; 
+}
+<h1>Session id @Context.Session.Id</h1>
+<p>If we refresh the page the counter will increase because the session will remain same and also if we go to new tab
+	and paste the url its remains same but if we copy paste the url to another browser or private browser the session will 
+	different and also if we delete the cookies the session will also delete... </p>
+<h1>Old value of counter : @(Context.Session.GetInt32(COUNTER)-1)</h1>
+<h1>New value of counter : @Context.Session.GetInt32(COUNTER)</h1>

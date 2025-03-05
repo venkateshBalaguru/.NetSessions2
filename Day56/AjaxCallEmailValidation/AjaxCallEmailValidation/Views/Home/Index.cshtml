@@ -28,7 +28,7 @@
         $("#imgLoading").show();
 
         var email = $("#email").val();
-
+        await $.post("/")
         await $.post("/Home/ValidateEmail", { email: email }, function(response) {
             $("#emailValidationMessage").html(response);
             if (response === "Email already exists") {
